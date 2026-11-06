@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="application-version" content="0.1.1" />
+    <meta name="theme-color" content="#101513" />
+    <link rel="icon" type="image/png" sizes="1254x1254" href="./assets/favicon-feIW6xZy.png" />
+    <link rel="apple-touch-icon" href="./assets/favicon-feIW6xZy.png" />
+    <link rel="canonical" href="https://hikari.my.id/ikari/" />
+    <meta name="application-name" content="IKARI" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="IKARI" />
+    <meta property="og:locale" content="id_ID" />
+    <meta property="og:title" content="IKARI — Intelligent Knowledge Assistant for Real-time Interaction" />
+    <meta property="og:description" content="Jelajahi lokasi melalui augmented reality dan panduan suara interaktif bersama IKARI." />
+    <meta property="og:url" content="https://hikari.my.id/ikari/" />
+    <meta property="og:image" content="https://hikari.my.id/ikari/logo/logo.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="500" />
+    <meta property="og:image:height" content="500" />
+    <meta property="og:image:alt" content="Logo IKARI" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="IKARI — Intelligent Knowledge Assistant for Real-time Interaction" />
+    <meta name="twitter:description" content="Jelajahi lokasi melalui augmented reality dan panduan suara interaktif bersama IKARI." />
+    <meta name="twitter:image" content="https://hikari.my.id/ikari/logo/logo.png" />
+    <meta name="twitter:image:alt" content="Logo IKARI" />
+    <title>IKARI</title>
+    <meta name="description" content="IKARI — Intelligent Knowledge Assistant for Real-time Interaction. Jelajahi lokasi melalui augmented reality dan panduan suara interaktif." />
+    <script type="module" crossorigin src="./assets/index-WWqYD960.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-BDC29UKJ.css">
+  </head>
+  <body>
+    <main class="ar-shell">
+      <canvas id="glscene" aria-label="Kanvas AR"></canvas>
+
+      <section id="entry-screen" class="entry-screen" aria-label="Mulai AR">
+        <div class="ui-language-toggle entry-language-toggle" role="group" aria-label="Bahasa UI">
+          <button
+            type="button"
+            class="ui-language-button is-active"
+            data-ui-language="id"
+            aria-pressed="true"
+          >
+            ID
+          </button>
+          <button
+            type="button"
+            class="ui-language-button"
+            data-ui-language="en"
+            aria-pressed="false"
+          >
+            EN
+          </button>
+        </div>
+        <a class="home-brand" href="./" aria-label="IKARI home"><img class="brand-logo" src="./assets/logo-C_TNxmdd.png" alt="IKARI" width="140" height="48" /><span class="brand-by">by Hikari.</span></a>
+        <div class="home-layout">
+          <div class="entry-content">
+            <p class="home-kicker"><span></span> <span data-home-id="PENGETAHUAN DI SEKITARMU" data-home-en="KNOWLEDGE ALL AROUND YOU">PENGETAHUAN DI SEKITARMU</span></p>
+            <h1>IKARI</h1>
+            <p class="home-fullname">Intelligent Knowledge Assistant<br />for Real-time Interaction</p>
+            <h2 data-home-id="Setiap tempat, cerita baru." data-home-en="Every place, a new story.">Setiap tempat, cerita baru.</h2>
+            <p class="home-description" data-home-id="Temukan cerita di balik tempat yang kamu kunjungi. Hadirkan pemandu AR, dengarkan kisahnya, dan tanyakan hal yang membuatmu penasaran." data-home-en="Discover the stories behind the places you visit. Meet your AR guide, listen to local stories, and ask what sparks your curiosity.">Temukan cerita di balik tempat yang kamu kunjungi. Hadirkan pemandu AR, dengarkan kisahnya, dan tanyakan hal yang membuatmu penasaran.</p>
+            <div class="home-actions"><button id="start-ar" type="button" class="primary">Mulai AR</button><a href="#home-guide" data-home-id="Cara menggunakan ↗" data-home-en="How it works ↗">Cara menggunakan ↗</a></div>
+            <p id="entry-status" class="entry-status" role="status">Siap</p>
+            <p class="home-permissions" data-home-id="Izinkan kamera & lokasi saat mulai. Mikrofon hanya diperlukan ketika bertanya lewat suara." data-home-en="Allow camera & location when starting. Microphone access is only needed for voice questions.">Izinkan kamera & lokasi saat mulai. Mikrofon hanya diperlukan ketika bertanya lewat suara.</p>
+          </div>
+          <div class="home-visual" aria-hidden="true">
+            <div class="visual-grid"></div><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+            <div class="visual-label"><span class="live-dot"></span> REAL-TIME EXPLORATION</div>
+            <div class="ikari-core"><img src="./assets/logo-C_TNxmdd.png" alt="" width="155" height="155" /></div>
+            <div class="visual-tag tag-location"><span class="tag-icon">⌖</span><div><small data-home-id="BERBASIS LOKASI" data-home-en="LOCATION BASED">BERBASIS LOKASI</small><strong data-home-id="Cerita di dekatmu" data-home-en="Stories nearby">Cerita di dekatmu</strong></div></div>
+            <div class="visual-tag tag-voice"><span class="voice-wave">▂▅▇▃▆▂</span><div><small data-home-id="PANDUAN INTERAKTIF" data-home-en="INTERACTIVE GUIDE">PANDUAN INTERAKTIF</small><strong data-home-id="Lihat. Dengar. Tanyakan." data-home-en="See. Listen. Ask.">Lihat. Dengar. Tanyakan.</strong></div></div>
+            <div class="visual-caption">A NEW WAY TO DISCOVER <span>↗</span></div>
+          </div>
+        </div>
+        <section class="home-guide" id="home-guide" aria-label="Cara menggunakan">
+          <div class="guide-heading"><p class="home-kicker" data-home-id="MULAI PENJELAJAHAN" data-home-en="START EXPLORING">MULAI PENJELAJAHAN</p><h2 data-home-id="Lebih dekat dengan ceritanya." data-home-en="Get closer to the story.">Lebih dekat dengan ceritanya.</h2></div>
+          <div class="guide-steps">
+            <article><span>01 /</span><h3 data-home-id="Buka pengalaman AR" data-home-en="Open the AR experience">Buka pengalaman AR</h3><p data-home-id="Tekan Mulai AR, lalu izinkan kamera dan lokasi di perangkatmu." data-home-en="Tap Start AR, then allow camera and location on your device.">Tekan Mulai AR, lalu izinkan kamera dan lokasi di perangkatmu.</p></article>
+            <article><span>02 /</span><h3 data-home-id="Dekati titik lokasi" data-home-en="Visit a location">Dekati titik lokasi</h3><p data-home-id="Pemandu muncul saat kamu berada dalam radius 50 meter dari titik yang tersedia." data-home-en="Your guide appears when you are within 50 metres of an available location.">Pemandu muncul saat kamu berada dalam radius 50 meter dari titik yang tersedia.</p></article>
+            <article><span>03 /</span><h3 data-home-id="Dengarkan & tanyakan" data-home-en="Listen & ask">Dengarkan & tanyakan</h3><p data-home-id="Pilih bahasa, putar cerita, atau gunakan mikrofon untuk bertanya tentang lokasi yang sedang dikunjungi." data-home-en="Choose a language, play the story, or use the microphone to ask about the place you are visiting.">Pilih bahasa, putar cerita, atau gunakan mikrofon untuk bertanya tentang lokasi yang sedang dikunjungi.</p></article>
+          </div>
+        </section>
+        <footer class="home-footer"><span>IKARI <span class="footer-dot">/</span> Hikari.</span><span data-home-id="15 titik eksplorasi · Penglipuran, INSTIKI & Bajra Sandhi" data-home-en="15 exploration points · Penglipuran, INSTIKI & Bajra Sandhi">15 titik eksplorasi · Penglipuran, INSTIKI & Bajra Sandhi</span><span>BAHASA INDONESIA / ENGLISH</span></footer>
+      </section>
+
+      <header class="topbar">
+        <div class="brand-block">
+          <div class="brand-row">
+            <p class="eyebrow">Hikari.</p>
+            <div class="ui-language-toggle" role="group" aria-label="Bahasa UI">
+              <button
+                type="button"
+                class="ui-language-button is-active"
+                data-ui-language="id"
+                aria-pressed="true"
+              >
+                ID
+              </button>
+              <button
+                type="button"
+                class="ui-language-button"
+                data-ui-language="en"
+                aria-pressed="false"
+              >
+                EN
+              </button>
+            </div>
+          </div>
+          <h1>IKARI</h1>
+        </div>
+        <div id="ar-status" class="status-pill" data-state="idle">Siap</div>
+      </header>
+
+      <div class="metrics" aria-live="polite">
+        <div>
+          <span id="gps-label">GPS</span>
+          <strong id="gps-mode">Belum aktif</strong>
+        </div>
+        <div>
+          <span id="accuracy-label">Akurasi</span>
+          <strong id="gps-accuracy">-</strong>
+        </div>
+        <div>
+          <span id="object-label">Objek</span>
+          <strong id="object-count">5</strong>
+        </div>
+      </div>
+
+      <section id="control-panel" class="panel" aria-label="Kontrol AR">
+        <div id="active-controls" class="active-controls" hidden>
+          <button id="reset-model" type="button" class="compact-button reset-button">
+            Letakkan ulang
+          </button>
+          <button
+            id="ui-toggle"
+            type="button"
+            class="compact-button ui-toggle-button"
+            aria-pressed="false"
+          >
+            Sembunyikan UI
+          </button>
+        </div>
+
+        <details id="size-controls" class="size-controls">
+          <summary data-home-id="Ukuran karakter & box lokasi" data-home-en="Character & location box size">Ukuran karakter & box lokasi</summary>
+          <div class="size-row">
+            <label for="character-scale" data-home-id="Karakter" data-home-en="Character">Karakter</label><output id="character-scale-value" for="character-scale">100%</output>
+            <button type="button" data-scale-kind="character" data-scale-step="-1" aria-label="Perkecil karakter / Smaller character">−</button><input id="character-scale" type="range" min="25" max="300" step="5" value="100" /><button type="button" data-scale-kind="character" data-scale-step="1" aria-label="Perbesar karakter / Larger character">+</button>
+          </div>
+          <div class="size-row">
+            <label for="location-scale" data-home-id="Box lokasi" data-home-en="Location box">Box lokasi</label><output id="location-scale-value" for="location-scale">100%</output>
+            <button type="button" data-scale-kind="location" data-scale-step="-1" aria-label="Perkecil box lokasi / Smaller location box">−</button><input id="location-scale" type="range" min="50" max="200" step="5" value="100" /><button type="button" data-scale-kind="location" data-scale-step="1" aria-label="Perbesar box lokasi / Larger location box">+</button>
+          </div>
+          <button id="reset-sizes" type="button" class="compact-button" data-home-id="Reset ukuran" data-home-en="Reset sizes">Reset ukuran</button>
+        </details>
+
+        <aside id="location-info" class="location-info" hidden>
+          <div class="panel-tools">
+            <div class="language-toggle" role="group" aria-label="Pilihan bahasa">
+              <button
+                id="language-id"
+                type="button"
+                class="language-button is-active"
+                data-language="id"
+                aria-pressed="true"
+              >
+                ID
+              </button>
+              <button
+                id="language-en"
+                type="button"
+                class="language-button"
+                data-language="en"
+                aria-pressed="false"
+              >
+                EN
+              </button>
+            </div>
+            <button id="location-audio" type="button" class="compact-button">
+              Suara
+            </button>
+            <button id="audio-stop" type="button" class="compact-button stop-button" disabled>
+              Stop
+            </button>
+            <button
+              id="face-camera"
+              type="button"
+              class="compact-button face-camera-button"
+              aria-pressed="false"
+            >
+              Hadap
+            </button>
+          </div>
+          <strong id="location-info-title"></strong>
+          <div id="location-info-description" class="location-description"></div>
+        </aside>
+
+        <section id="qa-panel" class="qa-panel" aria-label="Tanya IKARI" hidden>
+          <button id="ask-mic" type="button" class="mic-button">Mic</button>
+          <div class="qa-copy" aria-live="polite">
+            <span id="qa-question">IKARI siap</span>
+            <strong id="qa-answer">Jawaban suara akan diputar otomatis.</strong>
+          </div>
+        </section>
+
+        <div class="actions">
+          <button id="screen-3d" type="button" class="screen-fallback" hidden>
+            Tampilkan 3D
+          </button>
+        </div>
+
+        <p id="gps-debug" class="gps-debug" hidden></p>
+
+        <details class="locations-drawer" open>
+          <summary id="locations-summary">5 Lokasi</summary>
+          <ol id="location-list" class="location-list"></ol>
+        </details>
+      </section>
+    </main>
+
+  </body>
+</html>

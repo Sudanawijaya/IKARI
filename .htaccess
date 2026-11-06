@@ -1,0 +1,31 @@
+Options -Indexes
+RewriteEngine On
+RewriteOptions AllowNoSlash
+# TLS may terminate at the trusted reverse proxy in front of Apache.
+RewriteCond %{HTTPS} !=on
+RewriteCond %{HTTP:X-Forwarded-Proto} !^https$ [NC]
+RewriteCond %{HTTP_HOST} ^(?:www\.)?hikari\.my\.id(?::[0-9]+)?$ [NC]
+RewriteRule ^ https://hikari.my.id%{REQUEST_URI} [R=301,L,NE]
+# Canonical slash keeps relative assets and the PHP API under /ikari/.
+RewriteCond %{HTTP_HOST} ^(?:www\.)?hikari\.my\.id(?::[0-9]+)?$ [NC]
+RewriteCond %{REQUEST_URI} ^/ikari$
+RewriteRule ^ https://hikari.my.id/ikari/ [R=301,L]
+
+<FilesMatch "^\.env(?:\..*)?$">
+  Require all denied
+</FilesMatch>
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(html|css|js|mjs|json|glb|gltf)$">
+    Header set Cache-Control "no-store, no-cache, must-revalidate, max-age=0"
+    Header set Pragma "no-cache"
+    Header set Expires "0"
+    Header set Permissions-Policy "camera=(self), geolocation=(self), accelerometer=(self), gyroscope=(self), magnetometer=(self)"
+  </FilesMatch>
+</IfModule>
+
+<IfModule mod_mime.c>
+  AddType model/gltf-binary .glb
+  AddType model/gltf+json .gltf
+  AddType text/javascript .js .mjs
+</IfModule>

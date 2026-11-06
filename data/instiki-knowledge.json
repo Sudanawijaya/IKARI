@@ -1,0 +1,59 @@
+{
+  "topic": "INSTIKI",
+  "radiusMeters": 50,
+  "sourcePolicy": "Only https://instiki.ac.id/ and pages on that exact host. Fetch homepage for each question; reject request if unavailable. Never use unrelated general articles to expand the allowed topic.",
+  "verifiedAt": "2026-11-06",
+  "locations": [
+    {
+      "id": "instiki-1",
+      "name": "INSTIKI · Titik 1",
+      "category": "Kampus",
+      "title": "Sejarah INSTIKI",
+      "descriptionId": "INSTIKI adalah Institut Bisnis dan Teknologi Indonesia. Kampus ini didirikan pada 18 April 2008 dan sebelumnya dikenal sebagai STIKI Indonesia. Pada 2022, STIKI berubah menjadi INSTIKI.",
+      "descriptionEn": "INSTIKI is Institut Bisnis dan Teknologi Indonesia. Established on 18 April 2008, the institution was previously known as STIKI Indonesia and became INSTIKI in 2022.",
+      "longitude": 115.22623692791757,
+      "latitude": -8.690849490930324,
+      "altitude": 0,
+      "color": 13670733,
+      "accent": 15840618,
+      "scale": 1.15,
+      "sourceUrl": "https://instiki.ac.id/faq/"
+    },
+    {
+      "id": "instiki-2",
+      "name": "INSTIKI · Titik 2",
+      "category": "Kampus",
+      "title": "Pendidikan di INSTIKI",
+      "descriptionId": "INSTIKI mengembangkan pendidikan bisnis dan teknologi. Situs resminya memperkenalkan bidang Informatika, Rekayasa Sistem Komputer, Bisnis Digital, dan Desain Komunikasi Visual. Informasi program dan pendaftaran terbaru mengacu pada situs resmi INSTIKI.",
+      "descriptionEn": "INSTIKI provides education in business and technology. Its official website introduces Informatics, Computer Systems Engineering, Digital Business, and Visual Communication Design. Refer to the official INSTIKI website for current programme and admissions information.",
+      "longitude": 115.22655074637419,
+      "latitude": -8.690900530606648,
+      "altitude": 0,
+      "color": 13670733,
+      "accent": 15840618,
+      "scale": 1.15,
+      "sourceUrl": "https://instiki.ac.id/jurusan/"
+    },
+    {
+      "id": "instiki-3",
+      "name": "INSTIKI · Titik 3",
+      "category": "Kampus",
+      "title": "Bisnis Digital INSTIKI",
+      "descriptionId": "Program studi Bisnis Digital INSTIKI menggabungkan bisnis, teknologi, dan desain. Materinya mencakup pengelolaan bisnis dan pemasaran digital, termasuk pemasaran media sosial serta pengelolaan konten.",
+      "descriptionEn": "INSTIKI’s Digital Business programme combines business, technology, and design. Topics include business management and digital marketing, including social media marketing and content management.",
+      "longitude": 115.22712742131374,
+      "latitude": -8.690909147693624,
+      "altitude": 0,
+      "color": 13670733,
+      "accent": 15840618,
+      "scale": 1.15,
+      "sourceUrl": "https://instiki.ac.id/prodi-bisnis-digital/"
+    }
+  ],
+  "sources": [
+    "https://instiki.ac.id/",
+    "https://instiki.ac.id/faq/",
+    "https://instiki.ac.id/jurusan/",
+    "https://instiki.ac.id/prodi-bisnis-digital/"
+  ]
+}
